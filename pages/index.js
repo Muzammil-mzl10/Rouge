@@ -5,8 +5,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-    <div className='bg-black text-white'>Hello</div>  
-    <div className='bg-black text-white'>Hello</div>  
+    <div className='bg-black text-white'>Landing Page</div>   
     </>
   )
 }
