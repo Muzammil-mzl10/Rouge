@@ -72,11 +72,6 @@ export default function registration() {
                   First Name
                 </label>
               </div>
-              {/* <input
-                type="text"
-                placeholder="First name"
-                {...register("First name", { required: true, maxLength: 80 })}
-              /> */}
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="text"
@@ -93,13 +88,6 @@ export default function registration() {
                   Last name
                 </label>
               </div>
-              {/* <input
-                type="text"
-                className=""
-                placeholder="Last name"
-                {...register("Last name", { required: true, maxLength: 100 })}
-              /> */}
-
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="email"
@@ -119,14 +107,6 @@ export default function registration() {
                   Email
                 </label>
               </div>
-              {/* <input
-                type="text"
-                placeholder="Email"
-                {...register("Email", {
-                  required: true,
-                  pattern: /^\S+@\S+$/i,
-                })}
-              /> */}
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="tel"
@@ -154,18 +134,13 @@ export default function registration() {
                 onChange={setSelected}
               >
                 {({ open }) => (
-                  <>
+                  <div>
                     <Listbox.Label className="block text-sm font-medium text-gray-700">
                       Gender
                     </Listbox.Label>
-                    <div className="relative mt-1">
-                      <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                    <div className="relative mt-1" >
+                      <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-ring-rouge-Pink focus:outline-none focus:ring-1 focus:ring-rouge-Pink sm:text-sm">
                         <span className="flex items-center">
-                          {/* <img
-                        src={selected.avatar}
-                        alt=""
-                        className="h-6 w-6 flex-shrink-0 rounded-full"
-                      /> */}
                           <span className="ml-1 block truncate">
                             {selected.name}
                           </span>
@@ -192,7 +167,7 @@ export default function registration() {
                               className={({ active }) =>
                                 classNames(
                                   active
-                                    ? "text-white bg-indigo-600"
+                                    ? "text-white bg-rouge-Pink"
                                     : "text-gray-900",
                                   "relative cursor-default select-none py-2 pl-3 pr-9"
                                 )
@@ -202,11 +177,6 @@ export default function registration() {
                               {({ selected, active }) => (
                                 <>
                                   <div className="flex items-center">
-                                    {/* <img
-                                  src={person.avatar}
-                                  alt=""
-                                  className="h-6 w-6 flex-shrink-0 rounded-full"
-                                /> */}
                                     <span
                                       className={classNames(
                                         selected
@@ -224,7 +194,7 @@ export default function registration() {
                                       className={classNames(
                                         active
                                           ? "text-white"
-                                          : "text-indigo-600",
+                                          : "text-rouge-Pink",
                                         "absolute inset-y-0 right-0 flex items-center pr-4"
                                       )}
                                     >
@@ -241,23 +211,17 @@ export default function registration() {
                         </Listbox.Options>
                       </Transition>
                     </div>
-                  </>
+                  </div>
                 )}
               </Listbox>
 
               <div>
-                {/* <input
-                {...register("TOS", { required: true })}
-                type="checkbox"
-                  value="Yes"
-                  className="bg-rouge-Pink text-rouge-Pink"
-              /> */}
                 <input
                   {...register("TOS", { required: true })}
                   id="link-checkbox"
                   type="checkbox"
                   value=""
-                  class="w-4 h-4 text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
+                  class="w-4 h-4 text-rouge-Pink text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
                 />
                 <span className="ml-2">
                   By creating your account, you agree to our{" "}
