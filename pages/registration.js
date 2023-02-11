@@ -221,7 +221,7 @@ export default function registration() {
                   id="link-checkbox"
                   type="checkbox"
                   value=""
-                  class="w-4 h-4 text-rouge-Pink text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
+                  class="w-4 h-4 text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
                 />
                 <span className="ml-2">
                   By creating your account, you agree to our{" "}
@@ -233,7 +233,7 @@ export default function registration() {
                   <span className="text-rouge-Pink font-bold cursor-pointer">
                     {" "}
                     Privacy Policy
-                  </span>
+                  </span>                  
                 </span>
               </div>
 
