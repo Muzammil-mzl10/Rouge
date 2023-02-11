@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "rouge-Pink": "#c30c98",
+        "hover-rouge-Pink": "#981515",
+      },
+    },
   },
   plugins: [],
 };
