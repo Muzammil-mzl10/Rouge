@@ -1,4 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+/**
+ * @format
+ * @type {import('tailwindcss').Config}
+ */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -10,6 +14,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto"],
+        readex: ["Readex Pro"],
+      },
       colors: {
         "rouge-Pink": "#c30c98",
         "hover-rouge-Pink": "#981515",
