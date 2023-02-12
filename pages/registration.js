@@ -53,7 +53,7 @@ export default function registration() {
           <div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="lg:w-[30vw] md:w-[60vw] w-[90vw] flex flex-col space-y-8 py-2 px-8 bg-[#F5F5F5] rounded-lg"
+              className="lg:w-[30vw] md:w-[60vw] w-[90vw] shadow-lg flex flex-col space-y-8 py-2 px-8 bg-[#F5F5F5] rounded-lg"
             >
               <div className="mt-2 font-bold text-xl">Sign up</div>
               <div class="relative z-0 w-full mb-6 group">
