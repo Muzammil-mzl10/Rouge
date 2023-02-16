@@ -1,5 +1,6 @@
 import React, {useState, Fragment} from "react";
 import { useForm } from "react-hook-form";
+import Header from "../components/Header";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 const people = [
@@ -48,26 +49,29 @@ export default function registration() {
   console.log(errors);
 
     return (
-      <>
-        <div className="w-[100vw] h-[100vh] bg-slate-300 flex flex-col justify-center items-center">
+      <div className="w-full h-fit bg-[#F5F5FF]">
+        <Header data={"Login"} />
+        <div className=" flex flex-col justify-center items-center">
           <div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="lg:w-[30vw] md:w-[60vw] w-[90vw] shadow-lg flex flex-col space-y-8 py-2 px-8 bg-[#F5F5F5] rounded-lg"
+              className="lg:w-[30vw] md:w-[60vw] w-[90vw] mt-20 shadow-lg flex flex-col space-y-8 py-2 px-8 bg-white rounded-lg"
             >
-              <div className="mt-2 font-bold text-xl">Sign up</div>
+              <div className="mt-5 font-roboto text-xl font-semibold">
+                Sign up
+              </div>
               <div class="relative z-0 w-full mb-6 group">
                 <input
                   type="text"
                   name="firstName"
                   id="firstName"
                   {...register("First name", { required: true, maxLength: 80 })}
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
                   placeholder=" "
                 />
                 <label
                   for="firstName"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   First Name
                 </label>
@@ -77,13 +81,13 @@ export default function registration() {
                   type="text"
                   name="lastName"
                   id="lastName"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
                   {...register("Last name", { required: true, maxLength: 100 })}
                   placeholder=" "
                 />
                 <label
                   for="lastName"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Last name
                 </label>
@@ -93,7 +97,7 @@ export default function registration() {
                   type="email"
                   name="email"
                   id="email"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
                   {...register("Email", {
                     required: true,
                     pattern: /^\S+@\S+$/i,
@@ -102,9 +106,49 @@ export default function registration() {
                 />
                 <label
                   for="email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
-                  Email
+                  E-mail Address
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  {...register("Mobile number", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 12,
+                  })}
+                  placeholder=" "
+                />
+                <label
+                  for="password"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Password
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input
+                  type="text"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  {...register("Mobile number", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 12,
+                  })}
+                  placeholder=" "
+                />
+                <label
+                  for="confirmPassword"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Confirm Password
                 </label>
               </div>
               <div class="relative z-0 w-full mb-6 group">
@@ -112,7 +156,7 @@ export default function registration() {
                   type="tel"
                   name="mobileNumber"
                   id="mobileNumber"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
                   {...register("Mobile number", {
                     required: true,
                     minLength: 6,
@@ -122,12 +166,12 @@ export default function registration() {
                 />
                 <label
                   for="mobileNumber"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Mobile Number
                 </label>
               </div>
-              
+
               <Listbox
                 {...register("Title", { required: true })}
                 value={selected}
@@ -138,7 +182,7 @@ export default function registration() {
                     <Listbox.Label className="block text-sm font-medium text-gray-700">
                       Gender
                     </Listbox.Label>
-                    <div className="relative mt-1" >
+                    <div className="relative mt-1">
                       <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-ring-rouge-Pink focus:outline-none focus:ring-1 focus:ring-rouge-Pink sm:text-sm">
                         <span className="flex items-center">
                           <span className="ml-1 block truncate">
@@ -215,7 +259,7 @@ export default function registration() {
                 )}
               </Listbox>
 
-              <div>
+              <div className="">
                 <input
                   {...register("TOS", { required: true })}
                   id="link-checkbox"
@@ -223,34 +267,34 @@ export default function registration() {
                   value=""
                   class="w-4 h-4 text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
                 />
-                <span className="ml-2">
+                <span className="ml-2 -mt-1 font-readex font-normal text-sm">
                   By creating your account, you agree to our{" "}
                   <span className="text-rouge-Pink font-bold cursor-pointer">
                     {" "}
-                    Term of Use
+                    Terms of Use
                   </span>{" "}
                   &{" "}
                   <span className="text-rouge-Pink font-bold cursor-pointer">
                     {" "}
                     Privacy Policy
-                  </span>                  
+                  </span>
                 </span>
               </div>
 
               <input
                 type="submit"
                 value="Let's Go !"
-                className="p-2 rounded-lg cursor-pointer border bg-rouge-Pink hover:bg-hover-rouge-Pink text-white font-bold text-lg"
+                className="p-2 rounded-lg text-opacity-90 font-roboto cursor-pointer border bg-rouge-Pink hover:bg-hover-rouge-Pink text-white font-bold text-lg"
               />
             </form>
           </div>
-          <div className="mt-5">
+          <div className="my-5">
             Already have an account?{" "}
             <span className="text-rouge-Pink font-bold cursor-pointer">
               Login
             </span>
           </div>
         </div>
-      </>
+      </div>
     );
 }
