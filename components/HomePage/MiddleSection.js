@@ -53,7 +53,56 @@ function MiddleSection() {
                   <span className="px-2 font-medium">Facebook</span>
                 </a>
               )}
-              {active === "username" && "hahaha"}
+              {active === "username" && (
+                <div>
+                  <form className="flex lg:flex-row md:flex-row flex-col lg:space-x-5 md:space-x-5 space-x-0">
+                    <div class="relative z-0 w-full mb-6 group">
+                      <input
+                        type="text"
+                        name="userNAme"
+                        id="userName"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                        placeholder=" "
+                      />
+                      <label
+                        for="userName"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >
+                        Username
+                      </label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-rouge-Pink focus:outline-none focus:ring-0 focus:border-rouge-Pink peer"
+                        placeholder=" "
+                      />
+                      <label
+                        for="password"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3  origin-[0] peer-focus:left-0 peer-focus:text-rouge-Pink peer-focus:dark:text-rouge-Pink peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >
+                        Password
+                      </label>
+                    </div>
+                    <button className="px-12 py-2 h-[44px] rounded-md cursor-pointer  bg-rouge-Pink transition-colors duration-300 hover:bg-hover-rouge-Pink text-white font-medium text-sm">
+                      {"Register"}
+                    </button>
+                  </form>
+                  <div className="lg:mt-0 md:mt-0 mt-5"> 
+                    
+                  <input
+                  
+                    id="link-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-3 h-3 text-rouge-Pink bg-rouge-Pink border-rouge-Pink rounded focus:ring-rouge-Pink  focus:ring-2  "
+                  />
+                  <span className="ml-2 -mt-2">Remember this Device</span>
+                </div>
+                </div>
+              )}
             </div>
           </div>
           <div className="flex h-fit space-x-5 items-center pt-20 justify-center w-full">
