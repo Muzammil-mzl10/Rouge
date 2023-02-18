@@ -6,20 +6,20 @@ import Header from "../Header";
 function UpperSection() {
   return (
     <div
-      className="relative w-full h-[630px] flex items-center justify-center
+      className="relative w-full h-fit flex items-center justify-center
     "
     >
       <div
         className="after:block after:content-[''] after:absolute after:-left-[8rem] after:-right-[8rem]  after:bg-white after:opacity-50 after:-bottom-[4rem] after:h-[120px] after:-rotate-[2.7deg]  
-                    absolute w-full h-[630px] overflow-hidden bg-[rgba(0,0,0,0.8)] 
+                    absolute w-full h-full overflow-hidden bg-[rgba(0,0,0,0.8)] 
                     before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cover before:bg-no-repeat before:opacity-[.1] before:bg-[url('/images/welcome.jpg')] before:bg-center"
       >
         <svg
           viewBox="0 0 909 721"
           version="1.1"
-          className="text-white opacity-[.03] tag_auth_effect absolute -right-[111px] -top-[161px] w-[909px] h-[721px] "
+          className="hidden lg:block text-white opacity-[.03] tag_auth_effect absolute -right-[111px] -top-[161px] w-[909px] h-[721px] "
         >
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g
               transform="translate(-1744.000000, -1065.000000)"
               fill="currentColor"
@@ -34,9 +34,9 @@ function UpperSection() {
         <svg
           viewBox="0 0 426 474"
           version="1.1"
-          className="text-white opacity-[.04] tag_auth_effect absolute -left-[321px] -bottom-[61px] w-[500px] h-[500px]"
+          className="text-white hidden lg:block opacity-[.04] tag_auth_effect absolute -left-[321px] -bottom-[61px] w-[500px] h-[500px]"
         >
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g
               transform="translate(-388.000000, -381.000000)"
               fill="currentColor"
@@ -52,20 +52,20 @@ function UpperSection() {
       <div className="absolute w-full h-fit top-0 left-0">
         <Header />
       </div>
-      <div className="flex flex-col text-white items-center space-y-2 justify-center max-w-5xl h-fit z-10">
+      <div className="flex flex-col text-white py-52  overflow-x-hidden items-center space-y-2 px-10 justify-center max-w-5xl h-fit z-10">
         <p className="uppercase tracking-wider font-medium">Welcome!</p>
-        <h1 className="font-readex font-bold text-5xl text-center">
+        <h1 className="font-readex font-bold text-4xl md:text-5xl text-center">
           Experience the future of social media on RouGee!
         </h1>
-        <div className="flex flex-row items-center space-x-2 py-8">
-          <div className="w-14 h-14 bg-black rounded-full"></div>
-          <div className="w-14 h-14 bg-black rounded-full"></div>
+        <div className="flex flex-row items-center space-x-2 py-4 md:py- overflow-hidden">
+          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-black rounded-full"></div>
+          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-black rounded-full"></div>
 
-          <div className="w-14 h-14 bg-black rounded-full"></div>
+          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-black rounded-full"></div>
 
-          <div className="w-14 h-14 bg-black rounded-full"></div>
+          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-black rounded-full"></div>
 
-          <div className="w-14 h-14 bg-black rounded-full"></div>
+          <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-black rounded-full"></div>
         </div>
       </div>
     </div>
